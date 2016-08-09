@@ -9,7 +9,7 @@
 		// Params
 		self.show = true;
 		self.userInput = ""; 
-		self.placeholder = "Buscar logros";
+		self.placeholder = "Type things";
 
 		// Properties
 		self.service = search;
