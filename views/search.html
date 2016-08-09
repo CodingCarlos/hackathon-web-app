@@ -22,7 +22,10 @@
 		
 		<!-- Tab content -->
 		<main class="mdl-layout__content">
-			Search whatever...
+			<div ng-show="search.service.results.length == 0">Search whatever...</div>
+			<div ng-repeat="result in search.service.results">
+				{{result.title}}
+			</div>
 		</main>
 		
 	</div>
