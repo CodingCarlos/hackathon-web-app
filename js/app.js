@@ -11,7 +11,7 @@
 					.state('home', {
 						url: "/",
 						views: {
-							// "sidebar": { templateUrl: "views/sidebar.html" },
+							"sidebar": { templateUrl: "views/sidebar.html" },
 							"content": { templateUrl: "views/home.html" }
 						},
 						viewCache: true

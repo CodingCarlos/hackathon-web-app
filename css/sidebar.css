@@ -1,0 +1,76 @@
+/* Fixeado el espacio entre las opciones del sidebar y la cabecera */
+.mdl-layout__drawer .mdl-navigation {
+    padding-top: 8px;
+    margin-left: 0px;
+}
+
+    .mdl-navigation a { 
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+.sidebar-header {
+    position: relative;
+    height: 157.5px;
+}
+
+.sidebar-header img {
+    margin-left: 24px; 
+}
+
+/* Sidebar Cabecera */
+.sidebar-bg {
+    height: 157px;
+    width: 100%;
+    display: inline-block;
+    background-color: #ff9800;
+    background-image: url("../img/interface/sidebar-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+/* */
+.sidebar-icon {
+    display: inline-block;
+    margin-right: 16px;
+    min-width: 40px;
+    width: 40px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sidebar-bg img {
+    width: 74px;
+    height: 74px;
+    /* margin: 46px 16px 0 16px; */
+    margin-top: -226px;
+    border-radius: 10px;
+}
+
+.mdl-layout__drawer {
+    border-right: 0px solid #e0e0e0;
+}
+
+.sidebar-name {
+    height: 34px;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    background-color: rgba(0,0,0,.1);
+    margin-top: 109px;
+    padding-top: 14px;
+    padding-left: 24px;
+}
+
+#sidebar-profile .profile-pic {
+    background-color: #fff;
+    border: none;
+    height: 86px;
+    left: 24px;
+    /* margin-left: -48px; */
+    position: absolute;
+    top: 12px;
+    width: 86px;
+}

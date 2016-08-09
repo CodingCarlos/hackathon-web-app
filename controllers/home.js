@@ -16,7 +16,10 @@
 		self.update = update;
 
 		// Hands on!
-		self.service.get();	
+		if(self.service.data.length == 0) {
+			self.service.get();	
+		}
+		// update();
 	}
 
 	function update() {

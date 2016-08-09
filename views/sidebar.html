@@ -1,0 +1,11 @@
+<div ng-click="app.closeSidebar(); sidebar.trackEvent('sidebarHeaderProfile');" ui-sref="profile({uid:{{app.session.uid}}})" id="sidebar-profile" class="sidebar-header sidebar-bg">
+    <div class="sidebar-name">{{app.session.name}}</div>
+    <!-- <img src="" ng-src="{{app.session.pic}}" /> -->
+    <div class="profile-pic" style="background-image: url({{app.session.pic}})"></div>
+</div> 
+<!-- Navigation -->
+<nav class="mdl-navigation">
+    <a ng-click="app.closeSidebar();" ui-sref="home" class="mdl-navigation__link" href=""><i class="material-icons sidebar-icon">&#xE7F2;</i>Home</a>
+    <a ng-click="app.closeSidebar();" ui-sref="over" class="mdl-navigation__link" href=""><i class="material-icons sidebar-icon">&#xE80B;</i>Section</a>
+    <a ng-click="app.closeSidebar(); app.logout()" ui-sref="landing" class="mdl-navigation__link" href=""><i class="material-icons sidebar-icon">&#xE879;</i>Logout</a>
+</nav>

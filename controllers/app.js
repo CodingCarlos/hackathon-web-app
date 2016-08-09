@@ -9,9 +9,13 @@
 		// Params
 		self.hello = "world";
 
-		// Methods
+		// Properties
 		self.session = session;
+		
+		// Methods
 		self.update = update;
+		self.closeSidebar = closeSidebar;
+		self.logout = logout
 
 		// Hands on!
 
@@ -21,11 +25,26 @@
 		update();
 	}
 
+
 	function update() {
 		setTimeout(function() {
 			// Update also the component handler to fix the js menus
 			window.componentHandler.upgradeAllRegistered();
 		}, 0); 
+	}
+
+	function closeSidebar() {
+		var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
+		var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
+
+		if(drawer) {
+			drawer.toggleClass('is-visible');
+			obfuscator.toggleClass('is-visible');
+		}
+	}
+
+	function logout() {
+		console.log('Shall close the session but... not yet T_T')
 	}
 	
 })();
