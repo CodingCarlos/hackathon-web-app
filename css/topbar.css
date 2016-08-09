@@ -1,0 +1,138 @@
+.mdl-layout__header-row {
+    height: 56px;
+    padding: 0px 8px 0 72px;
+}
+
+/* Always shows the topbar shadow. A fix to the scrolling tabs shadow disappearing */
+.always-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1),0 3px 1px -2px rgba(0,0,0,.1),0 1px 5px 0 rgba(0,0,0,.1);
+    position: relative;
+}
+
+/* Changes topbar background color */
+.mdl-layout__header {
+    background-color: #ff9800;  
+}
+
+/* Always show topbar title */
+.mdl-layout__title, .mdl-layout-title {
+    /*z-index: 2;*/
+}
+
+/* Changes opacity of the navigation icons */
+.mdl-navigation__link {
+    opacity: 1;
+}
+
+/* Changes color and position of the notification badge */
+.mdl-badge[data-badge]:after {
+    background-color: red;
+    width: 18px;
+    height: 18px;
+}
+
+.mdl-badge.mdl-badge--overlap:after {
+    right: -8px;
+    top: -4px;
+}
+
+/* Topbar variation for submenus */
+.header-submenu {
+    height: 56px;
+    width: 100%;
+    background-color: #ff9800;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1),0 3px 1px -2px rgba(0,0,0,.1),0 1px 5px 0 rgba(0,0,0,.1);
+}
+
+/* Larger topbar for screens such as the Achivement creator or the Profile */
+.header-submenu-large {
+    height: 121px;
+    width: 100%;
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Arrow back button WHITE */
+    .header-submenu-button {
+        display: block;
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        font-size: 26px;
+        line-height: 50px;
+        color: #fff;
+        text-align: center;
+        z-index: 4;
+        margin: 6px;
+    }
+
+/* Arrow back button BLACK */
+    .header-submenu-button-black {
+        display: block;
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        font-size: 26px;
+        line-height: 52px;
+        color: black;
+        text-align: center;
+        z-index: 4;
+        margin: 5px;
+    }
+
+.mdl-tabs__tab-bar {
+    border-bottom: none;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+    margin: 6px;
+}
+
+.mdl-tabs .white-tabs .mdl-tabs__tab {
+    color: rgba(255, 152, 0, .6) !important;
+}
+
+.mdl-tabs .white-tabs .mdl-tabs__tab.is-active {
+    color: #ff9800 !important;
+}
+
+.mdl-tabs .white-tabs .mdl-tabs__tab.is-active::after {
+    background: #ff9800 !important;
+}
+
+.mdl-tabs .orange-tabs .mdl-tabs__tab {
+    color: rgba(255,255,255,.6) !important;
+}
+
+.mdl-tabs .orange-tabs .mdl-tabs__tab.is-active {
+    color: white !important;
+}
+
+.mdl-tabs .orange-tabs .mdl-tabs__tab.is-active::after {
+    background: white !important;
+}
+
+.orange-tabs {
+    height: 48px;
+    min-height: 48px;
+    padding: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1),0 3px 1px -2px rgba(0,0,0,.1),0 1px 5px 0 rgba(0,0,0,.1);
+    background-color: #ff9800;
+    color: white;
+    position: relative;
+}
+
+.white-tabs {
+    height: 48px;
+	min-height: 48px;
+    padding: 0;
+    width: 100%;
+	z-index: 2;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.1),0 3px 1px -2px rgba(0,0,0,.1),0 1px 5px 0 rgba(0,0,0,.1);
+	background-color: white;
+	color: #ff9800;
+    position: relative;
+}

@@ -19,7 +19,6 @@
 		if(self.service.data.length == 0) {
 			self.service.get();	
 		}
-		// update();
 	}
 
 	function update() {

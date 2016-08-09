@@ -16,6 +16,7 @@
 		self.update = update;
 		self.closeSidebar = closeSidebar;
 		self.logout = logout
+		self.back = back;
 
 		// Hands on!
 
@@ -45,6 +46,11 @@
 
 	function logout() {
 		console.log('Shall close the session but... not yet T_T')
+	}
+
+	function back() {
+		console.log('back');
+		window.history.back();
 	}
 	
 })();

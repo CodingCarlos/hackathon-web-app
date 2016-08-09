@@ -1,0 +1,30 @@
+<!-- <div id="search" class="over-view">	 -->
+<div id="search" class="over-view" ng-controller="searchCtrl as search">	
+
+	<!-- Simple header with fixed tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	
+		<header class="mdl-layout__header">
+			<!-- Back button-->
+			<div ng-click="search.back();" id="topbar-back" aria-expanded="false" role="button" tabindex="0" class= "mdl-layout__drawer-button">
+			<!-- <div ui-sref="home" id="topbar-back" aria-expanded="false" role="button" tabindex="0" class= "mdl-layout__drawer-button"> -->
+				<i class="material-icons">&#xE5C4;</i>
+			</div>
+			<!-- Search input -->
+			<div class="mdl-layout__header-row">
+				<input ng-model="search.userInput" class="mdl-layout-title" placeholder="{{search.placeholder}}" ng-keydown="$event.which === 13 && search.service.search(search.userInput)">
+				<div class="mdl-layout-spacer"></div>
+				<nav ng-if="search.userInput !=''" class="mdl-navigation">
+					<i ng-click="search.clear();" class="material-icons">&#xE5CD;</i>
+				</nav>
+			</div>
+		</header>
+		
+		<!-- Tab content -->
+		<main class="mdl-layout__content">
+			Search whatever...
+		</main>
+		
+	</div>
+	
+</div>

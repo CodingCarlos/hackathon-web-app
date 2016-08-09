@@ -21,8 +21,8 @@
 				'Content-Type': 'application/x-www-form-urlencoded'
 			}
 
-			if(token !== null) {
-				headers.Authorization = 'Bearer ' + token;
+			if(api.token !== null) {
+				headers.Authorization = 'Bearer ' + api.token;
 			}
 
 			$http({
@@ -47,8 +47,8 @@
 
 			var headers = {}
 
-			if(token !== null) {
-				headers.Authorization = 'Bearer ' + token;
+			if(api.token !== null) {
+				headers.Authorization = 'Bearer ' + api.token;
 			}
 
 			$http({

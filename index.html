@@ -18,6 +18,8 @@
 		<!-- CSS custom -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<link rel="stylesheet" href="css/sidebar.css" type="text/css" />
+		<link rel="stylesheet" href="css/topbar.css" type="text/css" />
+		<link rel="stylesheet" href="css/search.css" type="text/css" />
 		<!-- <link rel="stylesheet" href="css/home.css" type="text/css" /> -->
 		
 		<!-- Add to homescreen @ iOS -->
@@ -29,51 +31,45 @@
 	
 	<body>
 
-		<!-- <div ng-controller="appCtrl as app"> -->
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-controller="appCtrl as app">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title">An Amazing Web App</span>
 
-			<!-- Always shows a header, even in smaller screens. -->
-			<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-controller="appCtrl as app">
-				<header class="mdl-layout__header">
-					<div class="mdl-layout__header-row">
-						<!-- Title -->
-						<span class="mdl-layout-title">An Amazing Web App</span>
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
 
-						<!-- Add spacer, to align navigation to the right -->
-						<div class="mdl-layout-spacer"></div>
+					<!-- Desktop Navigation -->
+					<nav class="mdl-navigation mdl-layout--large-screen-only">
+						<a class="mdl-navigation__link" href="">Link</a>
+						<a class="mdl-navigation__link" href="">Link</a>
+						<a class="mdl-navigation__link" href="">Link</a>
+						<a class="mdl-navigation__link" href="">Link</a>
+					</nav>
 
-						<!-- Desktop Navigation -->
-						<nav class="mdl-navigation mdl-layout--large-screen-only">
-							<a class="mdl-navigation__link" href="">Link</a>
-							<a class="mdl-navigation__link" href="">Link</a>
-							<a class="mdl-navigation__link" href="">Link</a>
-							<a class="mdl-navigation__link" href="">Link</a>
-						</nav>
+					<!-- Mobile topbar Navigation -->
+					<nav class="mdl-navigation mdl-layout--small-screen-only">
+						<a ui-sref="search" class="mdl-navigation__link" href=""><i class="material-icons">search</i></a>
+					</nav>
 
-						<!-- Mobile topbar Navigation -->
-						<nav class="mdl-navigation mdl-layout--small-screen-only">
-							<a ui-sref="search" class="mdl-navigation__link" href=""><i class="material-icons">search</i></a>
-						</nav>
-
-					</div>
-				</header>
-
-				<!-- Mobile sidebar Navigation -->
-				<div class="mdl-layout__drawer">
-					<span ui-view="sidebar"></span>
 				</div>
+			</header>
 
-				<!-- Main content -->
-				<main class="mdl-layout__content">
-					<div ui-view="content" class="page-content"></div>
-				</main>
+			<!-- Mobile sidebar Navigation -->
+			<div class="mdl-layout__drawer">
+				<span ui-view="sidebar"></span>
 			</div>
 
-			<!-- Hello, {{app.session.name}} -->
+			<!-- Main content -->
+			<main class="mdl-layout__content">
+				<div ui-view="content" class="page-content"></div>
+			</main>
+		</div>
 
 
-			<div ui-view="overview"></div>
-
-		<!-- </div> -->
+		<div ui-view="overview"></div>
 
 
 		<!-- jQuery -->
@@ -91,6 +87,7 @@
 		<script type="text/javascript" src="services/session.js"></script>
 		<!-- <script type="text/javascript" src="services/login.js"></script> -->
 		<script type="text/javascript" src="services/home.js"></script>
+		<script type="text/javascript" src="services/search.js"></script>
 
 		<!-- Directives -->
 		<script type="text/javascript" src="directives/event.js"></script>
@@ -99,5 +96,6 @@
 		<script type="text/javascript" src="controllers/app.js"></script>
 		<!-- <script type="text/javascript" src="controllers/login.js"></script> -->
 		<script type="text/javascript" src="controllers/home.js"></script>
+		<script type="text/javascript" src="controllers/search.js"></script>
 	</body>
 </html>

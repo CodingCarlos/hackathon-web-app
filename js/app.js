@@ -16,6 +16,12 @@
 						},
 						viewCache: true
 					})
+					.state('search', {
+						url: "/search",
+						views: {
+							"overview": { templateUrl: "views/search.html" }
+						}
+					})
 					.state('over', {
 						url: "/section",
 						views: {
