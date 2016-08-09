@@ -1,0 +1,9 @@
+<div id="home" ng-controller="homeCtrl as home">
+
+	<h1>Home</h1>
+
+	<event ng-repeat="evt in home.service.data" data="evt"></event>
+
+	<a ui-sref="over">Go to section -></a>
+
+</div>
