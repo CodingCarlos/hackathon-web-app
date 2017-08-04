@@ -3,7 +3,7 @@
 	angular.module("app")
 		.factory("api", apiService);
 
-	function apiService($http, session) {
+	function apiService($http) {
 
 		var api = {
 			URL: 'http://api.whatever.com',
